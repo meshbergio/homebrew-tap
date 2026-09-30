@@ -18,7 +18,10 @@ jobs:
       - uses: Homebrew/actions/setup-homebrew@main
       - name: install from this tap
         # setup-homebrew links this checkout in as the meshbergio/tap tap.
+        # GitHub's Mac images link an old openssl@1.1, which clashes with the
+        # openssl@3 that tmux brings; a normal Mac doesn't have it.
         run: |
+          brew unlink openssl@1.1 2>/dev/null || true
           brew install meshbergio/tap/toomux
           brew test meshbergio/tap/toomux
           toomux --version
