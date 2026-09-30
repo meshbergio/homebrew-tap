@@ -1,0 +1,25 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-15, macos-15-intel, ubuntu-latest]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Homebrew/actions/setup-homebrew@main
+      - name: install from this tap
+        # setup-homebrew links this checkout in as the meshbergio/tap tap.
+        run: |
+          brew install meshbergio/tap/toomux
+          brew test meshbergio/tap/toomux
+          toomux --version
+          tmux -V
