@@ -3,28 +3,28 @@
 class Toomux < Formula
   desc "Control center for Claude Code sessions in tmux"
   homepage "https://github.com/meshbergio/toomux"
-  version "0.1.0"
+  version "0.2.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/meshbergio/toomux/releases/download/v0.1.0/toomux-aarch64-apple-darwin.tar.gz"
-      sha256 "a28f4985bd4d47a18ff82f62592215366fb416fba9b2c7117d5684740f08a116"
+      url "https://github.com/meshbergio/toomux/releases/download/v0.2.0/toomux-aarch64-apple-darwin.tar.gz"
+      sha256 "f41205432bd38ab5d6d073b325d965f46b792ec66bb6e3a4132a23d9bba9c255"
     else
-      url "https://github.com/meshbergio/toomux/releases/download/v0.1.0/toomux-x86_64-apple-darwin.tar.gz"
-      sha256 "806ff393b08b599682ea6a48e251b394f10629ea3b266a836e44ecf9409fdc56"
+      url "https://github.com/meshbergio/toomux/releases/download/v0.2.0/toomux-x86_64-apple-darwin.tar.gz"
+      sha256 "e60b5e7bfabc2a4487bea1afb4628cce3d866099852a8bcb3b452b3c7af84e73"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/meshbergio/toomux/releases/download/v0.1.0/toomux-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "c7279d4d02cf7f73444a8e2ab4a176e2e19111b958cbd67567ce116a807f4e0d"
+      url "https://github.com/meshbergio/toomux/releases/download/v0.2.0/toomux-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "ca914673b03a9db8c4673536871e8fe80f0b9ba07d5bb586fef18302098f5fe3"
     else
-      url "https://github.com/meshbergio/toomux/releases/download/v0.1.0/toomux-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "9a2a6ae133feb7ebe5dcdb52210cd8b12d2fd809f0f6bc6f4fff59236fdfe0ef"
+      url "https://github.com/meshbergio/toomux/releases/download/v0.2.0/toomux-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "ff10f00e703ae58bba97fe1ee302c276fa816025b4c8eda989142969440750c8"
     end
   end
 
