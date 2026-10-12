@@ -1,30 +1,30 @@
 # Rendered into meshbergio/homebrew-tap by packaging/homebrew/render.sh when a
 # release is made. Prebuilt binaries per platform, laio-style.
 class Toomux < Formula
-  desc "Claude Code sessions, accounts, handovers and memory in tmux"
-  homepage "https://github.com/meshbergio/toomux"
-  version "0.4.4"
+  desc "Every Claude Code session on one screen in tmux, with handover and recovery"
+  homepage "https://toomux.com"
+  version "0.5.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/meshbergio/toomux/releases/download/v0.4.4/toomux-aarch64-apple-darwin.tar.gz"
-      sha256 "3e07f047d6fc043d1ef6f97f599c8259a59c57e99cdb72f9f67afbba61bd4117"
+      url "https://github.com/meshbergio/toomux/releases/download/v0.5.0/toomux-aarch64-apple-darwin.tar.gz"
+      sha256 "475b1395dec3c2bd0a743c3003ee15bb81b1c66c36da9bf44a2b972ac1caf85e"
     else
-      url "https://github.com/meshbergio/toomux/releases/download/v0.4.4/toomux-x86_64-apple-darwin.tar.gz"
-      sha256 "69b14df178cd85551cdc6e2a5a5efc62e38355db9c28b59c5f2eadc33fc3a3f9"
+      url "https://github.com/meshbergio/toomux/releases/download/v0.5.0/toomux-x86_64-apple-darwin.tar.gz"
+      sha256 "28426ab31a6c1d211c01a1d2cdede15d54e38758c242c46beb1c9e548c633b9e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/meshbergio/toomux/releases/download/v0.4.4/toomux-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "28eba75d9b44501f9430c9d1c2353a9b40b9a41b00dfe9adf2aeb6c0c1cd7cd8"
+      url "https://github.com/meshbergio/toomux/releases/download/v0.5.0/toomux-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "ce3c8343fbc9ce04e2ab190b76bdf233496fef7b2a8141bfbf1289aefea79783"
     else
-      url "https://github.com/meshbergio/toomux/releases/download/v0.4.4/toomux-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "03c72a8f1e186bdfc47826357720c7cea62c53b89518b7e78655d1e75bbc657a"
+      url "https://github.com/meshbergio/toomux/releases/download/v0.5.0/toomux-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "0ce99c56493d253fd03fd78d812dba3c005414e8dbc82d50a09890fbf60844c7"
     end
   end
 
